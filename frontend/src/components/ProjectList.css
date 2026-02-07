@@ -1,0 +1,76 @@
+.project-grid {
+    margin-top: var(--space-lg);
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.project-header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.featured-badge {
+    font-size: 0.75rem;
+    color: var(--warning);
+    font-weight: 500;
+}
+
+.project-title {
+    font-size: 1.25rem;
+    color: var(--text-primary);
+}
+
+.project-description {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    flex: 1;
+}
+
+.project-skills {
+    margin-top: auto;
+}
+
+.project-links {
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-sm);
+    padding-top: var(--space-md);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+}
+
+.project-link:hover {
+    color: var(--text-primary);
+    background: var(--bg-card-hover);
+}
+
+.project-link.live {
+    color: var(--accent-primary);
+}
+
+.project-link.live:hover {
+    color: var(--accent-secondary);
+}
+
+.no-projects {
+    text-align: center;
+    padding: var(--space-2xl);
+    color: var(--text-muted);
+}

@@ -1,0 +1,182 @@
+### Me-API Playground - Sample HTTP Requests
+### Use with VS Code REST Client extension or import into Postman
+
+@baseUrl = http://localhost:3000
+
+### ===================
+### Health Check
+### ===================
+
+### Check API health
+GET {{baseUrl}}/health
+
+### Get API info
+GET {{baseUrl}}/
+
+### ===================
+### Profile
+### ===================
+
+### Get full profile
+GET {{baseUrl}}/profile
+
+### Update profile
+PUT {{baseUrl}}/profile
+Content-Type: application/json
+
+{
+  "name": "Aman Joshi",
+  "bio": "Updated bio text here"
+}
+
+### ===================
+### Skills
+### ===================
+
+### Get all skills
+GET {{baseUrl}}/skills
+
+### Get skills by category
+GET {{baseUrl}}/skills?category=Backend
+
+### Get top 5 skills
+GET {{baseUrl}}/skills/top?limit=5
+
+### Get skills grouped by category
+GET {{baseUrl}}/skills/categories
+
+### Add new skill
+POST {{baseUrl}}/skills
+Content-Type: application/json
+
+{
+  "name": "GraphQL",
+  "category": "Backend",
+  "proficiency_level": "intermediate"
+}
+
+### Delete skill (replace ID)
+DELETE {{baseUrl}}/skills/16
+
+### ===================
+### Projects
+### ===================
+
+### Get all projects
+GET {{baseUrl}}/projects
+
+### Get featured projects
+GET {{baseUrl}}/projects?featured=true
+
+### Filter projects by skill
+GET {{baseUrl}}/projects?skill=python
+
+### Filter projects by skill (partial match)
+GET {{baseUrl}}/projects?skill=react
+
+### Get single project
+GET {{baseUrl}}/projects/1
+
+### Create new project
+POST {{baseUrl}}/projects
+Content-Type: application/json
+
+{
+  "title": "New Project",
+  "description": "A description of the new project",
+  "github_url": "https://github.com/user/project",
+  "live_url": "https://project.example.com",
+  "is_featured": true,
+  "skills": ["JavaScript", "React", "Node.js"]
+}
+
+### Update project
+PUT {{baseUrl}}/projects/1
+Content-Type: application/json
+
+{
+  "description": "Updated project description",
+  "is_featured": true
+}
+
+### Delete project (replace ID)
+DELETE {{baseUrl}}/projects/6
+
+### ===================
+### Education
+### ===================
+
+### Get all education entries
+GET {{baseUrl}}/education
+
+### Add education entry
+POST {{baseUrl}}/education
+Content-Type: application/json
+
+{
+  "degree": "Master of Science",
+  "institution": "Tech University",
+  "field_of_study": "Computer Science",
+  "start_year": 2024,
+  "end_year": 2026,
+  "gpa": "4.0/4.0"
+}
+
+### Update education
+PUT {{baseUrl}}/education/1
+Content-Type: application/json
+
+{
+  "gpa": "9.0/10"
+}
+
+### Delete education (replace ID)
+DELETE {{baseUrl}}/education/2
+
+### ===================
+### Work Experience
+### ===================
+
+### Get all work experience
+GET {{baseUrl}}/work
+
+### Add work experience
+POST {{baseUrl}}/work
+Content-Type: application/json
+
+{
+  "title": "Senior Developer",
+  "company": "Tech Corp",
+  "location": "San Francisco, CA",
+  "start_date": "2024-01",
+  "is_current": true,
+  "description": "Leading frontend development team"
+}
+
+### Update work experience
+PUT {{baseUrl}}/work/1
+Content-Type: application/json
+
+{
+  "end_date": "2024-12",
+  "is_current": false
+}
+
+### Delete work experience (replace ID)
+DELETE {{baseUrl}}/work/3
+
+### ===================
+### Search
+### ===================
+
+### Search for "react"
+GET {{baseUrl}}/search?q=react
+
+### Search for "python"
+GET {{baseUrl}}/search?q=python
+
+### Search for "api"
+GET {{baseUrl}}/search?q=api
+
+### Search for "full-stack"
+GET {{baseUrl}}/search?q=full-stack

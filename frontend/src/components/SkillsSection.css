@@ -1,0 +1,107 @@
+.skills-section {
+    margin-bottom: var(--space-2xl);
+}
+
+.top-skills {
+    margin-bottom: var(--space-xl);
+}
+
+.top-skills h3 {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-md);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.top-skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+}
+
+.skill-chip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: var(--space-md) var(--space-lg);
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.skill-chip:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--accent-primary);
+    transform: translateY(-2px);
+}
+
+.skill-chip.active {
+    background: var(--accent-primary);
+    border-color: var(--accent-primary);
+}
+
+.skill-chip.active .skill-name {
+    color: white;
+}
+
+.skill-chip.active .skill-count {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.skill-name {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.skill-count {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.skills-categories {
+    display: grid;
+    gap: var(--space-lg);
+}
+
+.skill-category {
+    background: var(--bg-card);
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.category-title {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-md);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.proficiency-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-left: var(--space-xs);
+}
+
+.proficiency-dot[data-level="beginner"] {
+    background: var(--warning);
+}
+
+.proficiency-dot[data-level="intermediate"] {
+    background: #3b82f6;
+}
+
+.proficiency-dot[data-level="advanced"] {
+    background: var(--success);
+}
+
+.proficiency-dot[data-level="expert"] {
+    background: var(--accent-primary);
+}
